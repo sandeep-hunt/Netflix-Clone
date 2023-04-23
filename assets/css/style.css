@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +15,9 @@
 }
 
 body {
+    background-color: var(--black);
     color: var(--primary-text);
+    font-family: 'poppins', sans-serif;
 }
 
 h1 {
@@ -43,11 +47,12 @@ ul {
 
 /* utilities */
 
-.container {
-    max-width: 1180px;
-    margin-inline: auto;
-    padding-inline: 20px;
-    overflow: hidden;
+.mt-1 {
+    margin-top:0.5rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
 }
 
 .flex {
@@ -57,17 +62,88 @@ ul {
 
 .primary-button {
     background-color: var(--primary-btn);
+    border: 1px solid var(--primary-btn);
     color: var(--primary-text);
-    text-align: center;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.secondary-button {
+    background-color: transparent;
+    border: 1px solid var(--primary-text);
+    color: var(--primary-text);
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 /* Hero Section */
 
 .hero-section {
-    background-image: url('../images/bg-image.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../images/bg-image.jpg');
     width: 100%;
     height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button {
+    margin-left: 10px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.hero-content h1 {
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.hero-content h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.email-signup {
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.email-signup input {
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.email-signup button {
+    border: 0;
+    outline: 0;
+    background-color: var(--primary-btn);
+    color: var(--primary-text);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 13px;
 }
